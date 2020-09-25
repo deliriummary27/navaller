@@ -1,0 +1,13 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+*.pyc
+*~
+/.vscode
+__pycache__
+myvenv
+db.sqlite3
+/static
+.DS_Store
+/node_modules
+/build
