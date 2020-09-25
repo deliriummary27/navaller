@@ -8,7 +8,7 @@ export default class AdmiralOverview extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://127.0.0.1:8000/api/admirals/')
+        axios.get('api/admirals/')
             .then(res => {
                 return this.setState({
                     admirals: res.data

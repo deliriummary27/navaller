@@ -10,7 +10,7 @@ export default class Comments extends Component {
 
 
     componentDidMount() {
-        axios.get('http://127.0.0.1:8000/api/comments/')
+        axios.get('api/comments/')
             .then(res => {
                 this.setState({
                     comments: res.data
@@ -26,19 +26,19 @@ export default class Comments extends Component {
         let article = this.props.item.id
         
         if (this.props.articleType === 'article') {
-            return axios.post('http://127.0.0.1:8000/api/comments/', {
+            return axios.post('api/comments/', {
             name: name,
             content: content,
             article: article
         })
         } else if (this.props.articleType === 'admiral') {
-            return axios.post('http://127.0.0.1:8000/api/comments/', {
+            return axios.post('api/comments/', {
             name: name,
             content: content,
             admiral: article
         })
         } else {
-            return axios.post('http://127.0.0.1:8000/api/comments/', {
+            return axios.post('api/comments/', {
             name: name,
             content: content,
             timeline: article

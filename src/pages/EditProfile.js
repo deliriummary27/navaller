@@ -19,7 +19,7 @@ class EditProfile extends Component {
     }
 
     componentDidMount = () => {
-        axios.get('http://127.0.0.1:8000/api/profiles/')
+        axios.get('api/profiles/')
         .then(res => {
             this.setState({
                 profiles: res.data,
@@ -52,7 +52,7 @@ class EditProfile extends Component {
         let photoe = event.target.files[0]
         const uploadData = new FormData()
         uploadData.append('photo', photoe, photoe.name)
-        axios.patch(`http://127.0.0.1:8000/api/profiles/${id}/`, uploadData)
+        axios.patch(`api/profiles/${id}/`, uploadData)
     }
 
     handleSubmit = (event) => {
@@ -65,7 +65,7 @@ class EditProfile extends Component {
         let twitter = event.target.elements.twitter.value
         let youtube = event.target.elements.youtube.value
         let bio = event.target.elements.bio.value
-        axios.patch(`http://127.0.0.1:8000/api/profiles/${id}/`, {
+        axios.patch(`api/profiles/${id}/`, {
             email,
             phone,
             country,

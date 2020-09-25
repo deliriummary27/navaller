@@ -9,13 +9,13 @@ export default class ArticleList extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://127.0.0.1:8000/api/articles/')
+        axios.get('api/articles/')
         .then(res => {
             this.setState({
                 article: res.data
             })
         })
-        axios.get('http://127.0.0.1:8000/api/profiles/')
+        axios.get('api/profiles/')
         .then(res => {
             this.setState({
                 profile: res.data

@@ -27,7 +27,7 @@ class CreateTimeline extends Component {
         uploadData.append('year', year)
         uploadData.append('image', image, image.name) 
         uploadData.append('des', des) 
-        axios.post('http://127.0.0.1:8000/api/timeline/', uploadData)
+        axios.post('api/timeline/', uploadData)
         .then(this.props.history.push('/profile'))
     }
 

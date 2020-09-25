@@ -18,25 +18,25 @@ class PublicProfile extends Component {
 
     componentDidMount = () => {
         const ID = this.props.match.params.slug
-        axios.get(`http://127.0.0.1:8000/api/profiles/`)
+        axios.get(`api/profiles/`)
         .then(res => {
             this.setState({
                 profiles: res.data.filter(it => it.user === parseInt(ID))[0]
             })
         })
-        axios.get('http://127.0.0.1:8000/api/articles/')
+        axios.get('api/articles/')
         .then(res => {
             this.setState({
                 articles: res.data
             })
         })
-        axios.get('http://127.0.0.1:8000/api/admirals/')
+        axios.get('api/admirals/')
         .then(res => {
             this.setState({
                 admirals: res.data
             })
         })
-        axios.get('http://127.0.0.1:8000/api/timeline/')
+        axios.get('api/timeline/')
         .then(res => {
             this.setState({
                 timeline: res.data

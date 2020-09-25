@@ -15,7 +15,7 @@ export default class CreatePoll extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://127.0.0.1:8000/api/questions/')
+        axios.get('api/questions/')
         .then(res => {
             this.setState({
                 questions: res.data
@@ -26,17 +26,17 @@ export default class CreatePoll extends Component {
     handleQuestion = event => {
         const ques = event.target.elements.question.value
         if (window.location.pathname[14] === 'r') {
-            axios.post('http://127.0.0.1:8000/api/questions/', {
+            axios.post('api/questions/', {
             ques: ques,
             article: parseInt(window.location.pathname[window.location.pathname.length - 1])
         })
         } else if (window.location.pathname[14] === 'd') {
-            axios.post('http://127.0.0.1:8000/api/questions/', {
+            axios.post('api/questions/', {
             ques: ques,
             admiral: parseInt(window.location.pathname[window.location.pathname.length - 1])
         })
         } else if (window.location.pathname[14] === 'i') {
-            axios.post('http://127.0.0.1:8000/api/questions/', {
+            axios.post('api/questions/', {
             ques: ques,
             timeline: parseInt(window.location.pathname[window.location.pathname.length - 1])
         })
@@ -54,7 +54,7 @@ export default class CreatePoll extends Component {
                 return this.state.questions.filter(it => it.timeline === parseInt(window.location.pathname[window.location.pathname.length - 1]))[0]
             }
         }
-        axios.post('http://127.0.0.1:8000/api/options/', {
+        axios.post('api/options/', {
             opt: opt,
             question: question().id
         })

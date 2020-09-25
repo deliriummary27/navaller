@@ -15,7 +15,7 @@ class Nav extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://127.0.0.1:8000/api/profiles/')
+        axios.get('api/profiles/')
         .then(res => {
             this.setState({
                 profiles: res.data

@@ -23,20 +23,20 @@ class TimelinePage extends Component {
 
     componentDidMount() {
         const articleID = this.props.match.params.slug
-        axios.get(`http://127.0.0.1:8000/api/timeline/${articleID}/`)
+        axios.get(`api/timeline/${articleID}/`)
             .then(res => {
                 this.setState({
                     data: res.data
                     
                 })
             })
-            axios.get('http://127.0.0.1:8000/api/profiles/')
+            axios.get('api/profiles/')
             .then(res => {
                 this.setState({
                     profiles: res.data
                 })
             })
-            axios.get('http://127.0.0.1:8000/api/questions/')
+            axios.get('api/questions/')
             .then(res => {
             this.setState({
                 questions: res.data
@@ -46,19 +46,19 @@ class TimelinePage extends Component {
 
     handleDelete = (event) => {
         const articleID = this.props.match.params.slug
-        axios.delete(`http://127.0.0.1:8000/api/timeline/${articleID}/`)
+        axios.delete(`api/timeline/${articleID}/`)
         this.props.history.push('/')
  
     }
 
     copyLink = () => {
         const articleID = this.props.match.params.slug
-        copy(`http://localhost:3000/timeline/${articleID}`)
+        copy(`http://rallendalle.pythonanywhere.com/timeline/${articleID}`)
     }
 
     render() {
         const articleID = this.props.match.params.slug
-        let link = `http://localhost:3000/timeline/${articleID}`
+        let link = `http://rallendalle.pythonanywhere.com/timeline/${articleID}`
         const profile = this.state.profiles.filter(it => it.user === this.state.data.author)
         const profilePhoto = profile.map(it => {
             return <div className='detail-info-profile'><img style={{marginTop: '-13px'}} key={it.id} src={it.photo} alt='p'></img></div>

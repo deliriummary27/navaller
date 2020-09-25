@@ -11,7 +11,7 @@ export default class TimelineVertical extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://127.0.0.1:8000/api/timeline/')
+        axios.get('api/timeline/')
             .then(res => this.setState({
                 data: res.data
             }))

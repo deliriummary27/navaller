@@ -23,20 +23,20 @@ class ArticlesPage extends Component {
 
     componentDidMount() {
         const articleID = this.props.match.params.slug
-        axios.get(`http://127.0.0.1:8000/api/articles/${articleID}/`)
+        axios.get(`api/articles/${articleID}/`)
             .then(res => {
                 this.setState({
                     data: res.data
                     
                 })
             })
-        axios.get('http://127.0.0.1:8000/api/profiles/')
+        axios.get('api/profiles/')
             .then(res => {
                 this.setState({
                     profiles: res.data
                 })
             })
-        axios.get('http://127.0.0.1:8000/api/questions/')
+        axios.get('api/questions/')
         .then(res => {
             this.setState({
                 questions: res.data
@@ -47,7 +47,7 @@ class ArticlesPage extends Component {
 
     handleDelete = (event) => {
         const articleID = this.props.match.params.slug
-        axios.delete(`http://127.0.0.1:8000/api/articles/${articleID}/`)
+        axios.delete(`api/articles/${articleID}/`)
         this.props.history.push('/')
  
     }
@@ -55,12 +55,12 @@ class ArticlesPage extends Component {
 
     copyLink = () => {
         const articleID = this.props.match.params.slug
-        copy(`http://localhost:3000/articles/${articleID}`)
+        copy(`http://rallendalle.pythonanywhere.com/articles/${articleID}`)
     }
 
     render() {
         const articleID = this.props.match.params.slug
-        let link = `http://localhost:3000/articles/${articleID}`
+        let link = `http://rallendalle.pythonanywhere.com/articles/${articleID}`
         const profile = this.state.profiles.filter(it => it.user === this.state.data.author)
         const profilePhoto = profile.map(it => {
             return <div className='detail-info-profile'><img key={it.id} src={it.photo} alt='p'></img></div>

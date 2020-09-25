@@ -15,7 +15,7 @@ class EditAdmiral extends Component {
     }
 
     componentDidMount = () => {
-        axios.get('http://127.0.0.1:8000/api/admirals/')
+        axios.get('api/admirals/')
         .then(res => {
             this.setState({
                 articles: res.data,
@@ -43,7 +43,7 @@ class EditAdmiral extends Component {
         let photo = event.target.files[0]
         const uploadData = new FormData()
         uploadData.append('image', photo, photo.name)
-        axios.patch(`http://127.0.0.1:8000/api/admirals/${id}/`, uploadData)
+        axios.patch(`api/admirals/${id}/`, uploadData)
     }
 
     handleSubmit = (event) => {
@@ -51,7 +51,7 @@ class EditAdmiral extends Component {
         let title = event.target.elements.title.value
         let content = event.target.elements.content.value
         const subtitle = event.target.elements.subtitle.value
-        axios.patch(`http://127.0.0.1:8000/api/admirals/${id}/`, {
+        axios.patch(`api/admirals/${id}/`, {
             title,
             subtitle,
             content

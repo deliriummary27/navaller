@@ -14,7 +14,7 @@ class EditProfile extends Component {
     }
 
     componentDidMount = () => {
-        axios.get('http://127.0.0.1:8000/api/articles/')
+        axios.get('api/articles/')
         .then(res => {
             this.setState({
                 articles: res.data,
@@ -41,14 +41,14 @@ class EditProfile extends Component {
         let photo = event.target.files[0]
         const uploadData = new FormData()
         uploadData.append('image', photo, photo.name)
-        axios.patch(`http://127.0.0.1:8000/api/articles/${id}/`, uploadData)
+        axios.patch(`api/articles/${id}/`, uploadData)
     }
 
     handleSubmit = (event) => {
         const id = parseInt(window.location.pathname[window.location.pathname.length - 1])
         let title = event.target.elements.title.value
         let content = event.target.elements.content.value
-        axios.patch(`http://127.0.0.1:8000/api/articles/${id}/`, {
+        axios.patch(`api/articles/${id}/`, {
             title,
             content
         })
