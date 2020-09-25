@@ -19,7 +19,7 @@ export default class Overview extends Component {
 
 
     render() {
-        const artic = this.state.article.filter(it => it.id === 1 || it.id === 2 || it.id === 3)
+        const artic = this.state.article.filter(it => it.id === 2 || it.id === 3 || it.id === 4)
         const arties = artic.map((item,index) => {
             return(
                 <div>
