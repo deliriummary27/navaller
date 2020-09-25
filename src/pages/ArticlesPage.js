@@ -68,7 +68,7 @@ class ArticlesPage extends Component {
         const question = this.state.questions.filter(it => it.article === this.state.data.id)
         return (
             <div>
-            <ArticleSideBar id={this.state.data.id} articleType='article'/>
+            {/*<ArticleSideBar id={this.state.data.id} articleType='article'/>*/}
             <div className='detail-container'>
             {parseInt(this.props.userId) === parseInt(this.state.data.author) ? <div className='buttons-article'>
                 <button onClick={() => this.props.history.push(`/edit/article/${this.state.data.id}`)} className='btn btn-primary'>Edit</button>
