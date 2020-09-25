@@ -9,7 +9,7 @@ export default class Overview extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://127.0.0.1:8000/api/articles/')
+        axios.get('api/articles/')
             .then(res => {
                 this.setState({
                     article: res.data
