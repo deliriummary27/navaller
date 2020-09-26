@@ -33,6 +33,7 @@ export default class ArticleSideBar extends Component {
     }
 
     render() {
+        console.log(this.state.articles)
         const linkie = (it) => {
             if (this.props.articleType === 'article') {
                 return `/articles/${it.id}`
