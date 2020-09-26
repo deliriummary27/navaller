@@ -12,8 +12,7 @@ class Like extends Component {
     }
 
     componentDidMount() {
-        console.log(this.props.arti)
-        fetch('api/likes/')
+        axios.get('http://rallendalle.pythonanywhere.com/api/likes/')
             .then(res => {
                 this.setState({
                     likes: res.data
@@ -39,7 +38,7 @@ class Like extends Component {
             }
         }
         const id = like().id
-        axios.put(`api/likes/${id}/`, {
+        axios.put(`http://rallendalle.pythonanywhere.com/api/likes/${id}/`, {
             likes: like().likes + this.state.starsCount,
             people: like().people + 1
         })

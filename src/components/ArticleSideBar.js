@@ -9,21 +9,21 @@ export default class ArticleSideBar extends Component {
 
     componentDidMount() {
         if (this.props.articleType === 'article') {
-            axios.get('api/articles/')
+            axios.get('http://rallendalle.pythonanywhere.com/api/articles/')
             .then(res => {
                 this.setState({
                     articles: res.data
                 })
             })
         } else if (this.props.articleType === 'admiral') {
-            axios.get('api/admirals/')
+            axios.get('http://rallendalle.pythonanywhere.com/api/admirals/')
             .then(res => {
                 this.setState({
                     articles: res.data
                 })
             })
         } else if (this.props.articleType === 'timeline') {
-            axios.get('api/timeline/')
+            axios.get('http://rallendalle.pythonanywhere.com/api/timeline/')
             .then(res => {
                 this.setState({
                     articles: res.data

@@ -15,7 +15,7 @@ export default class CreatePoll extends Component {
     }
 
     componentDidMount() {
-        axios.get('api/questions/')
+        axios.get('http://rallendalle.pythonanywhere.com/api/questions/')
         .then(res => {
             this.setState({
                 questions: res.data
@@ -26,17 +26,17 @@ export default class CreatePoll extends Component {
     handleQuestion = event => {
         const ques = event.target.elements.question.value
         if (window.location.pathname[14] === 'r') {
-            axios.post('api/questions/', {
+            axios.post('http://rallendalle.pythonanywhere.com/api/questions/', {
             ques: ques,
             article: parseInt(window.location.pathname[window.location.pathname.length - 1])
         })
         } else if (window.location.pathname[14] === 'd') {
-            axios.post('api/questions/', {
+            axios.post('http://rallendalle.pythonanywhere.com/api/questions/', {
             ques: ques,
             admiral: parseInt(window.location.pathname[window.location.pathname.length - 1])
         })
         } else if (window.location.pathname[14] === 'i') {
-            axios.post('api/questions/', {
+            axios.post('http://rallendalle.pythonanywhere.com/api/questions/', {
             ques: ques,
             timeline: parseInt(window.location.pathname[window.location.pathname.length - 1])
         })
@@ -54,7 +54,7 @@ export default class CreatePoll extends Component {
                 return this.state.questions.filter(it => it.timeline === parseInt(window.location.pathname[window.location.pathname.length - 1]))[0]
             }
         }
-        axios.post('api/options/', {
+        axios.post('http://rallendalle.pythonanywhere.com/api/options/', {
             opt: opt,
             question: question().id
         })

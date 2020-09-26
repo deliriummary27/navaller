@@ -23,20 +23,20 @@ class AdmiralPage extends Component {
 
     componentDidMount() {
         const articleID = this.props.match.params.slug
-        axios.get(`api/admirals/${articleID}/`)
+        axios.get(`http://rallendalle.pythonanywhere.com/api/admirals/${articleID}/`)
             .then(res => {
                 this.setState({
                     data: res.data
                     
                 })
             })
-            axios.get('api/profiles/')
+            axios.get('http://rallendalle.pythonanywhere.com/api/profiles/')
             .then(res => {
                 this.setState({
                     profiles: res.data
                 })
             })
-            axios.get('api/questions/')
+            axios.get('http://rallendalle.pythonanywhere.com/api/questions/')
             .then(res => {
             this.setState({
                 questions: res.data
@@ -46,7 +46,7 @@ class AdmiralPage extends Component {
 
     handleDelete = (event) => {
         const articleID = this.props.match.params.slug
-        axios.delete(`api/admirals/${articleID}/`)
+        axios.delete(`http://rallendalle.pythonanywhere.com/api/admirals/${articleID}/`)
         this.props.history.push('/')
  
     }

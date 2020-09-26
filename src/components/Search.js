@@ -14,25 +14,25 @@ export default class Search extends Component {
     }
 
     componentDidMount() {
-        axios.get('api/articles/')
+        axios.get('http://rallendalle.pythonanywhere.com/api/articles/')
         .then(res => {
             this.setState({
                 articles: res.data
             })
         })
-        axios.get('api/admirals/')
+        axios.get('http://rallendalle.pythonanywhere.com/api/admirals/')
         .then(res => {
             this.setState({
                     admirals: res.data 
             })
         })
-        axios.get('api/timeline/')
+        axios.get('http://rallendalle.pythonanywhere.com/api/timeline/')
         .then(res => {
             this.setState({
                 timeline: res.data
             })
         }) 
-        axios.get('api/profiles/')
+        axios.get('http://rallendalle.pythonanywhere.com/api/profiles/')
         .then(res => {
             this.setState({
                 profile: res.data

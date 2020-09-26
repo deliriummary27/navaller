@@ -14,13 +14,13 @@ export default class Poll extends Component {
 
 
     componentDidMount() {
-        axios.get('api/questions/')
+        axios.get('http://rallendalle.pythonanywhere.com/api/questions/')
             .then(res => {
                 this.setState({
                     questions: res.data
                 })
             })
-        axios.get('api/options/')
+        axios.get('http://rallendalle.pythonanywhere.com/api/options/')
             .then(res => {
                 this.setState({
                     options: res.data

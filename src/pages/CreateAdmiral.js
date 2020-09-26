@@ -27,7 +27,7 @@ class CreateArticle extends Component {
         uploadData.append('author', author)
         uploadData.append('content', content)
         uploadData.append('image', image, image.name) 
-        axios.post('api/admirals/', uploadData)
+        axios.post('http://rallendalle.pythonanywhere.com/api/admirals/', uploadData)
         .then(this.props.history.push('/profile'))
     }
 

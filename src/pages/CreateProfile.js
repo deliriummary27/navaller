@@ -17,7 +17,7 @@ class CreateProfile extends Component {
         uploadData.append('photo', event.target.elements.photo.files[0], event.target.elements.photo.files[0].name)
         uploadData.append('bio', event.target.elements.bio.value)
 
-        axios.post('api/profiles/', uploadData)
+        axios.post('http://rallendalle.pythonanywhere.com/api/profiles/', uploadData)
         this.props.history.push('/profile')
     }
 
