@@ -160,4 +160,5 @@ ACCOUNT_EMAIL_REQUIRED = False
  
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'build', 'static'),
+    os.path.join(BASE_DIR, 'static'),
 ]
