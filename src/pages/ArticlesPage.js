@@ -108,8 +108,8 @@ class ArticlesPage extends Component {
                     <Like articleType='article' item={this.state.data}/>
                 </div>
                 <p className='lead'>{this.state.data.content}</p>
-                <Poll item={this.state.data} articleType='article'/>
-                <Comments item={this.state.data} articleType='article'/>
+                {/*<Poll item={this.state.data} articleType='article'/>
+                <Comments item={this.state.data} articleType='article'/>*/}
             </div>
             </div>
         )
