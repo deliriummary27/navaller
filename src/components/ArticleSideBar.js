@@ -9,7 +9,7 @@ export default class ArticleSideBar extends Component {
 
     componentDidMount() {
         if (this.props.articleType === 'article') {
-            axios.get('api/articles/')
+            fetch('api/articles/')
             .then(res => {
                 this.setState({
                     articles: res.data
