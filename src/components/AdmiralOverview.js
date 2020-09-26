@@ -17,7 +17,7 @@ export default class AdmiralOverview extends Component {
     }
 
     render() {
-        const admiralList = this.state.admirals.filter(it => it.id === 3 || it.id === 4 || it.id === 5 || it.id === 6 || it.id ===7)
+        const admiralList = this.state.admirals.filter(it => it.id === 1 || it.id === 2 || it.id === 3 || it.id === 4 || it.id === 5)
         const admiral = admiralList.map(item => {
             return <Admiral admiral={item}/>
         })
