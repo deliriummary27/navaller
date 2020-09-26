@@ -107,8 +107,6 @@ class ArticlesPage extends Component {
                     <h6>{String(this.state.data.date).slice(0, 10)}</h6>
                 </div>
                 <p className='lead'>{this.state.data.content}</p>
-                <Poll item={this.state.data} articleType='article'/>
-                <Comments item={this.state.data} articleType='article'/>
             </div>
             </div>
         )
