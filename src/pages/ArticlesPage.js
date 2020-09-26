@@ -23,14 +23,14 @@ class ArticlesPage extends Component {
 
     componentDidMount() {
         const articleID = this.props.match.params.slug
-        axios.get(`api/articles/${articleID}/`)
+        axios.get(`api/articles/2/`)
             .then(res => {
                 this.setState({
                     data: res.data
                     
                 })
             })
-        axios.get('http://rallendalle.pythonanywhere.com/api/profiles/')
+        axios.get('api/profiles/')
             .then(res => {
                 this.setState({
                     profiles: res.data
