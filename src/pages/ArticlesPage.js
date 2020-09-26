@@ -59,6 +59,7 @@ class ArticlesPage extends Component {
     }
 
     render() {
+        console.log(this.state.profiles)
         const articleID = this.props.match.params.slug
         let link = `http://rallendalle.pythonanywhere.com/articles/${articleID}`
         const profile = this.state.profiles.filter(it => it.user === this.state.data.author)
@@ -105,8 +106,11 @@ class ArticlesPage extends Component {
                     {profilePhoto}
                     <a href={`/public/profile/${parseInt(this.state.data.author)}`} className='display-4'>{this.state.data.authorName}</a>
                     <h6>{String(this.state.data.date).slice(0, 10)}</h6>
+                    <Like articleType='article' item={this.state.data}/>
                 </div>
                 <p className='lead'>{this.state.data.content}</p>
+                <Poll item={this.state.data} articleType='article'/>
+                <Comments item={this.state.data} articleType='article'/>
             </div>
             </div>
         )
