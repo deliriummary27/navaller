@@ -13,7 +13,7 @@ class Like extends Component {
 
     componentDidMount() {
         console.log(this.props.arti)
-        axios.get('api/likes/')
+        fetch('api/likes/')
             .then(res => {
                 this.setState({
                     likes: res.data
