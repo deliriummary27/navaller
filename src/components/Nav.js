@@ -73,6 +73,21 @@ class Nav extends Component {
                     </div>*/}
                     <hr></hr>
                 </div> : <></>}
+                {this.props.isAuthenticated ? 
+                    <div className='nav-toggle-special'>
+                    <FontAwesomeIcon icon={faSignOutAlt} className='nav-toggle-logout'/>
+                    {/*eslint-disable-next-line*/}
+                    <a onClick={this.props.logout} className='display-4' ><strong>Logout</strong></a>
+                    <hr></hr>
+                    </div>
+                    :
+                    <div>
+                    <a className='display-4' href='/login'><strong>Login</strong></a>
+                    <hr></hr>
+                    <a className='display-4' href='/signup'><strong>Signup</strong></a>
+                    <hr></hr>
+                    </div>
+                    }
                 {profPhoto}
                 <div className='big-screen-search'><Search /></div>
             </div>
