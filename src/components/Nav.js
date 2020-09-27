@@ -68,9 +68,9 @@ class Nav extends Component {
                     <hr></hr>
                     </div>
                     }
-                    <div className='small-screen-search'>
+                    {/*<div className='small-screen-search'>
                         <Search />
-                    </div>
+                    </div>*/}
                     <hr></hr>
                 </div> : <></>}
                 {profPhoto}
