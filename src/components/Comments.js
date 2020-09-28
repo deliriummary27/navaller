@@ -26,7 +26,7 @@ export default class Comments extends Component {
         let article = this.props.item.id
         
         if (this.props.articleType === 'article') {
-            return axios.post('rallendalle.pythonanywhere.com/api/comments/', {
+            return axios.post('http://rallendalle.pythonanywhere.com/api/comments/', {
             name: name,
             content: content,
             article: article
