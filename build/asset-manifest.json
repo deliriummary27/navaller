@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/build/static/css/main.860d1de4.chunk.css",
-    "main.js": "/build/static/js/main.aa0ad8a6.chunk.js",
-    "main.js.map": "/build/static/js/main.aa0ad8a6.chunk.js.map",
-    "runtime-main.js": "/build/static/js/runtime-main.769e58b9.js",
-    "runtime-main.js.map": "/build/static/js/runtime-main.769e58b9.js.map",
-    "static/css/2.829c9cb5.chunk.css": "/build/static/css/2.829c9cb5.chunk.css",
-    "static/js/2.6195e816.chunk.js": "/build/static/js/2.6195e816.chunk.js",
-    "static/js/2.6195e816.chunk.js.map": "/build/static/js/2.6195e816.chunk.js.map",
-    "index.html": "/build/index.html",
-    "precache-manifest.61528539bd98d5ba29f85dc90bda0de9.js": "/build/precache-manifest.61528539bd98d5ba29f85dc90bda0de9.js",
-    "service-worker.js": "/build/service-worker.js",
-    "static/css/2.829c9cb5.chunk.css.map": "/build/static/css/2.829c9cb5.chunk.css.map",
-    "static/css/main.860d1de4.chunk.css.map": "/build/static/css/main.860d1de4.chunk.css.map",
-    "static/js/2.6195e816.chunk.js.LICENSE.txt": "/build/static/js/2.6195e816.chunk.js.LICENSE.txt",
-    "static/media/navy.jpg": "/build/static/media/navy.6e59b82e.jpg",
-    "static/media/navy2.jpg": "/build/static/media/navy2.2a2eebaf.jpg",
-    "static/media/navy3.jpg": "/build/static/media/navy3.d24d7cb0.jpg"
+    "main.css": "/static/css/main.860d1de4.chunk.css",
+    "main.js": "/static/js/main.5c01152f.chunk.js",
+    "main.js.map": "/static/js/main.5c01152f.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.fe0cf552.js",
+    "runtime-main.js.map": "/static/js/runtime-main.fe0cf552.js.map",
+    "static/css/2.829c9cb5.chunk.css": "/static/css/2.829c9cb5.chunk.css",
+    "static/js/2.6195e816.chunk.js": "/static/js/2.6195e816.chunk.js",
+    "static/js/2.6195e816.chunk.js.map": "/static/js/2.6195e816.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.57e5bd989d56ddfd3d86e94e7705a704.js": "/precache-manifest.57e5bd989d56ddfd3d86e94e7705a704.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.829c9cb5.chunk.css.map": "/static/css/2.829c9cb5.chunk.css.map",
+    "static/css/main.860d1de4.chunk.css.map": "/static/css/main.860d1de4.chunk.css.map",
+    "static/js/2.6195e816.chunk.js.LICENSE.txt": "/static/js/2.6195e816.chunk.js.LICENSE.txt",
+    "static/media/navy.jpg": "/static/media/navy.6e59b82e.jpg",
+    "static/media/navy2.jpg": "/static/media/navy2.2a2eebaf.jpg",
+    "static/media/navy3.jpg": "/static/media/navy3.d24d7cb0.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.769e58b9.js",
+    "static/js/runtime-main.fe0cf552.js",
     "static/css/2.829c9cb5.chunk.css",
     "static/js/2.6195e816.chunk.js",
     "static/css/main.860d1de4.chunk.css",
-    "static/js/main.aa0ad8a6.chunk.js"
+    "static/js/main.5c01152f.chunk.js"
   ]
 }
