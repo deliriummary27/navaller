@@ -21,9 +21,14 @@ export default class Comments extends Component {
 
 
     handleSubmit = (event) => {
-        let name = String(event.target.elements.name.value) 
-        let content = String(event.target.elements.content.value) 
-        let article = String(this.props.item.id) 
+        let name = event.target.elements.name.value
+        let content = event.target.elements.content.value
+        let article = this.props.item.id
+        let body = {
+            name: name,
+            content: content, 
+            article: article
+        }
         
         if (this.props.articleType === 'article') {
             {/*axios.post('http://rallendalle.pythonanywhere.com/api/comments/', {
@@ -42,11 +47,7 @@ export default class Comments extends Component {
             },
             redirect: 'follow', // manual, *follow, error
             referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-            body: {
-                name: name,
-                content: content,
-                article: article
-            } // body data type must match "Content-Type" header
+            body: JSON.stringify(body)// body data type must match "Content-Type" header
           });
         } else if (this.props.articleType === 'admiral') {
             return axios.post('http://rallendalle.pythonanywhere.com/api/comments/', {
