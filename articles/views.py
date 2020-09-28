@@ -2,6 +2,10 @@ from django.shortcuts import render
 from django.views.generic import View
 from django.conf import settings
 from django.http import HttpResponse
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from django.views.decorators.csrf import csrf_exempt
+from braces.views import CsrfExemptMixin
 import logging
 import urllib.request
 import os
@@ -23,3 +27,9 @@ class FrontendAppView(View):
                     """,
                     status=501,
                 )
+
+class Object(CsrfExemptMixin, APIView):
+    authentication_classes = []
+
+    def post(self, request, format=None):
+        return Response({'received data': request.data})

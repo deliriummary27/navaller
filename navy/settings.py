@@ -154,8 +154,8 @@ REST_AUTH_SERIALIZERS = {
 
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = True
-CORS_ORIGIN_WHITELIST = ['http://rallendalle.pythonanywhere.com/']
-CSRF_TRUSTED_ORIGINS = ['http://rallendalle.pythonanywhere.com/']
+CORS_ORIGIN_WHITELIST = ['http://rallendalle.pythonanywhere.com']
+CSRF_TRUSTED_ORIGINS = ['http://rallendalle.pythonanywhere.com']
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 ACCOUNT_AUTHENTICATION_METHOD = 'username'
 ACCOUNT_EMAIL_REQUIRED = False
