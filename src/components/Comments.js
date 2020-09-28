@@ -21,9 +21,9 @@ export default class Comments extends Component {
 
 
     handleSubmit = (event) => {
-        let name = event.target.elements.name.value
-        let content = event.target.elements.content.value
-        let article = this.props.item.id
+        let name = String(event.target.elements.name.value) 
+        let content = String(event.target.elements.content.value) 
+        let article = String(this.props.item.id) 
         
         if (this.props.articleType === 'article') {
             {/*axios.post('http://rallendalle.pythonanywhere.com/api/comments/', {
