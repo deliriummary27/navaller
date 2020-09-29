@@ -9,7 +9,7 @@ export default class Overview extends Component {
     }
 
     componentDidMount() {
-        axios.get('api/articles/')
+        axios.get('http://deliriummary.pythonanywhere.com/articles/')
             .then(res => {
                 this.setState({
                     article: res.data
