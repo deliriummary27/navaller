@@ -11,7 +11,7 @@ export default class TimelineVertical extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://rallendalle.pythonanywhere.com/api/timeline/')
+        axios.get('http://deliriummary.pythonanywhere.com/timeline/')
             .then(res => this.setState({
                 data: res.data
             }))

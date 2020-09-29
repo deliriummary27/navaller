@@ -18,25 +18,25 @@ class PublicProfile extends Component {
 
     componentDidMount = () => {
         const ID = this.props.match.params.slug
-        axios.get(`http://rallendalle.pythonanywhere.com/api/profiles/`)
+        axios.get(`http://deliriummary.pythonanywhere.com/profiles/`)
         .then(res => {
             this.setState({
                 profiles: res.data.filter(it => it.user === parseInt(ID))[0]
             })
         })
-        axios.get('http://rallendalle.pythonanywhere.com/api/articles/')
+        axios.get('http://deliriummary.pythonanywhere.com/articles/')
         .then(res => {
             this.setState({
                 articles: res.data
             })
         })
-        axios.get('http://rallendalle.pythonanywhere.com/api/admirals/')
+        axios.get('http://deliriummary.pythonanywhere.com/admirals/')
         .then(res => {
             this.setState({
                 admirals: res.data
             })
         })
-        axios.get('http://rallendalle.pythonanywhere.com/api/timeline/')
+        axios.get('http://deliriummary.pythonanywhere.com/timeline/')
         .then(res => {
             this.setState({
                 timeline: res.data

@@ -15,7 +15,7 @@ class Nav extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://rallendalle.pythonanywhere.com/api/profiles/')
+        axios.get('http://deliriummary.pythonanywhere.com/profiles/')
         .then(res => {
             this.setState({
                 profiles: res.data

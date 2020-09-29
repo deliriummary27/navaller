@@ -15,7 +15,7 @@ class EditTimeline extends Component {
     }
 
     componentDidMount = () => {
-        axios.get('http://rallendalle.pythonanywhere.com/api/timeline/')
+        axios.get('http://deliriummary.pythonanywhere.com/timeline/')
         .then(res => {
             this.setState({
                 articles: res.data,
@@ -43,7 +43,7 @@ class EditTimeline extends Component {
         let photo = event.target.files[0]
         const uploadData = new FormData()
         uploadData.append('image', photo, photo.name)
-        axios.patch(`http://rallendalle.pythonanywhere.com/api/timeline/${id}/`, uploadData)
+        axios.patch(`http://deliriummary.pythonanywhere.com/timeline/${id}/`, uploadData)
     }
 
     handleSubmit = (event) => {
@@ -51,7 +51,7 @@ class EditTimeline extends Component {
         let title = event.target.elements.title.value
         let year = event.target.elements.year.value
         let des = event.target.elements.des.value
-        axios.patch(`http://rallendalle.pythonanywhere.com/api/timeline/${id}/`, {
+        axios.patch(`http://deliriummary.pythonanywhere.com/timeline/${id}/`, {
             title,
             year,
             des

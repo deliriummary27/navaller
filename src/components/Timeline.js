@@ -11,7 +11,7 @@ export default class Timeline extends Component {
     }
 
     componentDidMount() {
-        axios.get('api/timeline/')
+        axios.get('http://deliriummary.pythonanywhere.com/timeline/')
             .then(res => this.setState({
                 data: res.data
             }))

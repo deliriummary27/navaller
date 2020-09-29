@@ -24,39 +24,21 @@ export default class Comments extends Component {
         let name = event.target.elements.name.value
         let content = event.target.elements.content.value
         let article = this.props.item.id
-        let body = {
-            name: name,
-            content: content, 
-            article: article
-        }
         
         if (this.props.articleType === 'article') {
-            {/*axios.post('http://rallendalle.pythonanywhere.com/api/comments/', {
+            return axios.post('http://deliriummary.pythonanywhere.com/comments/', {
             name: name,
             content: content,
             article: article
-        })*/}
-        return fetch('http://rallendalle.pythonanywhere.com/api/comments/', {
-            method: 'POST', 
-            mode: 'cors', // no-cors, *cors, same-origin
-            cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-            credentials: 'same-origin', // include, *same-origin, omit
-            headers: {
-              'Content-Type': 'application/json'
-              // 'Content-Type': 'application/x-www-form-urlencoded',
-            },
-            redirect: 'follow', // manual, *follow, error
-            referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-            body: body// body data type must match "Content-Type" header
-          });
+        })
         } else if (this.props.articleType === 'admiral') {
-            return axios.post('http://rallendalle.pythonanywhere.com/api/comments/', {
+            return axios.post('http://deliriummary.pythonanywhere.com/comments/', {
             name: name,
             content: content,
             admiral: article
         })
         } else {
-            return axios.post('http://rallendalle.pythonanywhere.com/api/comments/', {
+            return axios.post('http://deliriummary.pythonanywhere.com/comments/', {
             name: name,
             content: content,
             timeline: article

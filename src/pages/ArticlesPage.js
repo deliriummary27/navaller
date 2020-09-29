@@ -23,20 +23,20 @@ class ArticlesPage extends Component {
 
     componentDidMount() {
         const articleID = this.props.match.params.slug
-        axios.get(`http://rallendalle.pythonanywhere.com/api/articles/${articleID}/`)
+        axios.get(`http://deliriummary.pythonanywhere.com/articles/${articleID}/`)
             .then(res => {
                 this.setState({
                     data: res.data
                     
                 })
             })
-        axios.get('http://rallendalle.pythonanywhere.com/api/profiles/')
+        axios.get('http://deliriummary.pythonanywhere.com/profiles/')
             .then(res => {
                 this.setState({
                     profiles: res.data
                 })
             })
-        axios.get('http://rallendalle.pythonanywhere.com/api/questions/')
+        axios.get('http://deliriummary.pythonanywhere.com/questions/')
         .then(res => {
             this.setState({
                 questions: res.data
@@ -47,7 +47,7 @@ class ArticlesPage extends Component {
 
     handleDelete = (event) => {
         const articleID = this.props.match.params.slug
-        axios.delete(`http://rallendalle.pythonanywhere.com/api/articles/${articleID}/`)
+        axios.delete(`http://deliriummary.pythonanywhere.com/articles/${articleID}/`)
         this.props.history.push('/')
  
     }

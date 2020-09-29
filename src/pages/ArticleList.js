@@ -9,13 +9,13 @@ export default class ArticleList extends Component {
     }
 
     componentDidMount() {
-        axios.get('api/articles/')
+        axios.get('http://deliriummary.pythonanywhere.com/articles/')
         .then(res => {
             this.setState({
                 article: res.data
             })
         })
-        axios.get('api/profiles/')
+        axios.get('http://deliriummary.pythonanywhere.com/profiles/')
         .then(res => {
             this.setState({
                 profile: res.data

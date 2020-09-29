@@ -14,13 +14,13 @@ export default class Poll extends Component {
 
 
     componentDidMount() {
-        axios.get('http://rallendalle.pythonanywhere.com/api/questions/')
+        axios.get('http://deliriummary.pythonanywhere.com/questions/')
             .then(res => {
                 this.setState({
                     questions: res.data
                 })
             })
-        axios.get('http://rallendalle.pythonanywhere.com/api/options/')
+        axios.get('http://deliriummary.pythonanywhere.com/options/')
             .then(res => {
                 this.setState({
                     options: res.data
@@ -43,7 +43,7 @@ export default class Poll extends Component {
             let option = this.state.options.filter(it => it.question === question().id)
             let optionSpecial = option.filter(it => it.id === id)
             const name = event.target.id
-            axios.put(`api/options/${id}/`, {
+            axios.put(`http://deliriummary.pythonanywhere.com/options/${id}/`, {
                 opt: name,
                 votes: optionSpecial[0].votes + 1,
                 article: this.props.item.id
