@@ -61,8 +61,8 @@
     }
     .banner h5 {
         position: absolute !important;
-        font-size: 20px !important;
-        margin-top: 8px !important;
+        font-size: 25px !important;
+        margin-top: 9px !important;
         margin-left: 18px !important;
     }
 }
@@ -464,6 +464,8 @@
     }
     .footer-container h5 {
         margin-top: 9px !important;
+        font-size: 20px !important;
+        width: 100% !important;
     }
 }
 
@@ -1139,7 +1141,7 @@
 .navv-container button {
     margin-top: -84.5px;
     float: right;
-    margin-right: 20px;
+    margin-right: 10px;
     font-size: 25px;
     color:  rgb(0, 165, 230);
     background-color: #88888800;
