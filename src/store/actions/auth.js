@@ -53,7 +53,7 @@ export const authLogin = (username, password) => {
 export const authSignup = (username, email, password1, password2) => {
     return dispatch => {
         dispatch(authStart())
-        axios.post('http://rallendalle.pythonanywhere.com/rest-auth/registration/', {
+        axios.post('http://deliriummary.pythonanywhere.com/rest-auth/registration/', {
             username: username,
             email: email,
             password1: password1,
