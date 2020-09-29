@@ -10,7 +10,7 @@ export default class Comments extends Component {
 
 
     componentDidMount() {
-        axios.get('http://rallendalle.pythonanywhere.com/api/comments/')
+        axios.get('http://deliriummary.pythonanywhere.com/comments/')
             .then(res => {
                 this.setState({
                     comments: res.data
