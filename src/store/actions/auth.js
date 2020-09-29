@@ -33,18 +33,10 @@ export const authLogout = () => {
 export const authLogin = (username, password) => {
     return dispatch => {
         dispatch(authStart())
-        axios({
-            method: 'post', 
-            url: 'http://rallendalle.pythonanywhere.com/rest-auth/login/',
-            data: {
-                username: username,
-                password: password
-            },
-            headers: {
-                'Access-Control-Allow-Origin': '*',
-                'Content-Type': 'application/json',
-            }
-          })
+        axios.post('http://deliriummary.pythonanywhere.com/rest-auth/login/', {
+            username: username,
+            password: password
+        })
         .then(res => {
             const token = res.data.key
             const id = res.data.user.id
