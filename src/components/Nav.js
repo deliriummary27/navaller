@@ -23,6 +23,13 @@ class Nav extends Component {
         })
     }
 
+    handleClick = () => {
+        this.setState(prevState => {
+            return {
+                isOpen: !prevState.isOpen
+            }
+        })
+    }
 
     render() {
         const profile = this.state.profiles.filter(it => it.user === parseInt(this.props.id))
@@ -43,7 +50,7 @@ class Nav extends Component {
             <div className='navv-container'>
                 <Link to='/'><h2 className='display-2'>Navaller</h2></Link>
                 {profPhotoSmall}
-                <button onClick={() => this.setState({isOpen: !this.state.isOpen})}><FontAwesomeIcon icon={faAlignRight}/></button>
+                <button type='button' onClick={this.handleClick}><FontAwesomeIcon icon={faAlignRight}/></button>
                 {this.state.isOpen ? <div className='nav-toggle'>
                     <a className='display-4' href='/'><strong>Home</strong></a>
                     <hr></hr>
