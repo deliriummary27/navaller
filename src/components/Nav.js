@@ -73,8 +73,6 @@ class Nav extends Component {
                     </div>
                     <hr></hr>
                 </div> : <></>}
-                <a onClick={this.props.logout} className='display-4' ><strong>Logout</strong></a>
-                    <hr></hr>
                 {profPhoto}
                 <div className='big-screen-search'><Search /></div>
             </div>
